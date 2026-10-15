@@ -45,6 +45,20 @@ body {
   gap: 16px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
 .nav h1 {
   margin: 0;
   font-size: 1.6rem;
