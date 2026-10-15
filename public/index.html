@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración del formulario</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div>
+          <h1>Administración</h1>
+        </div>
+        <nav>
+          <a href="#admin">Preguntas</a>
+          <a href="/encuestado">Vista encuestado</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container admin-layout">
+      <section id="admin" class="panel admin-panel">
+        <h2>Administración</h2>
+        <div class="questions-admin-list" id="admin-questions-list"></div>
+
+        <form id="question-form" class="question-form">
+          <label>
+            Pregunta
+            <input type="text" id="question-text" placeholder="Ej: ¿Qué tan preparado estás?" required />
+          </label>
+
+          <div>
+            <h3>Alternativas</h3>
+            <div id="options-list" class="options-list"></div>
+            <button type="button" id="add-option" class="secondary-btn">Agregar alternativa</button>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-btn" id="save-question-btn">Guardar pregunta</button>
+            <button type="button" id="cancel-edit-btn" class="ghost-btn hidden">Cancelar edición</button>
+          </div>
+        </form>
+
+        <div class="admin-actions">
+          <button id="export-btn" class="secondary-btn">Exportar Excel</button>
+        </div>
+
+        <div class="result-list-wrap">
+          <h3>Ranking</h3>
+          <div id="ranking-table-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
